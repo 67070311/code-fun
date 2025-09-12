@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator (jQuery)</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Calculator</h1>
+
+  <input type="text" id="left">
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+  </select>
+  <input type="text" id="right">
+  <button id="calcBtn">Try me!</button>
+
+  <script>
+    function isPositiveInteger(value) {
+      return /^\d+$/.test(value);
+    }
+
+    $("#calcBtn").on("click", function() {
+      let left = $("#left").val();
+      let right = $("#right").val();
+      let op = $("#operator").val();
+
+      if (!isPositiveInteger(left) || !isPositiveInteger(right)) {
+        alert("Error :(");
+        return;
+      }
+
+      left = parseInt(left);
+      right = parseInt(right);
+
+      if ((op === "/" || op === "%") && right === 0) {
+        alert("It's over 9000!");
+        console.log("It's over 9000!");
+        return;
+      }
+
+      let result;
+      switch(op) {
+        case "+": result = left + right; break;
+        case "-": result = left - right; break;
+        case "*": result = left * right; break;
+        case "/": result = left / right; break;
+        case "%": result = left % right; break;
+      }
+
+      alert("Result: " + result);
+      console.log("Result: " + result);
+    });
+
+    setInterval(function() {
+      alert("Please, use me...");
+    }, 30000);
+  </script>
+</body>
+</html>

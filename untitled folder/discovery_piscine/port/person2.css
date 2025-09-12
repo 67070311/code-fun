@@ -1,0 +1,136 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #0d0d0d;
+  color: white;
+  text-align: center;
+
+  background: linear-gradient(135deg, #1a0033, #0d0d0d, #33001f);
+  background-attachment: fixed;
+}
+
+/* Navbar */
+.navbar-custom {
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  padding: 15px 40px;
+  margin: 20px auto;
+  width: fit-content;
+  display: flex;
+  gap: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.navbar-custom a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-custom a:hover {
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  padding: 5px 20px;
+}
+
+.card {
+  border-radius: 12px;
+  padding: 0px;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-top: -40px;
+}
+
+.card img {
+  width: 400px;
+  border-radius: 12px;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 5px auto 100px;
+  max-width: 900px;
+
+  /* 👇 กรอบกล่อง */
+  background: rgba(4, 4, 4, 0.9);  /* สีขาวโปร่ง */
+  color: #ffffff;
+  padding: 30px 50px;
+  border-radius: 20px;                   /* มุมโค้ง */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.labels {
+  text-align: right;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2;
+}
+
+.values {
+  text-align: left;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.back-btn {
+  position: absolute;   /* จัดตำแหน่งแบบอิสระ */
+  top: 20px;            /* ระยะห่างจากด้านบน (เท่า navbar) */
+  left: 20px;           /* ชิดซ้าย */
+  z-index: 5;           /* ให้อยู่เหนือ background */
+}
+
+
+.back-btn a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  background: linear-gradient(45deg, #7c1536, #502489);
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 1s;
+}
+
+.back-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(175, 123, 242, 0.6);
+}
+
+
+
+
+/* Showcase */
+#showcase {
+  padding: 80px 20px;
+  background: #1a1a1a;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: left;
+}
+
+/* Contact */
+#contact {
+  padding: 80px 20px;
+  background: #0d0d0d;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator - It’s over 9000</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    input, select, button { margin: 10px; padding: 8px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Basic Calculator</h1>
+
+  <!-- Input fields -->
+  <input type="text" id="left" placeholder="Left number">
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+  </select>
+  <input type="text" id="right" placeholder="Right number">
+
+  <!-- Button -->
+  <button id="calcBtn">Try me!</button>
+
+  <script>
+    function isPositiveInteger(value) {
+      return /^\d+$/.test(value); // ตรวจว่ามีแต่ตัวเลข และเป็นจำนวนเต็มบวก
+    }
+
+    document.getElementById("calcBtn").addEventListener("click", function() {
+      let left = document.getElementById("left").value;
+      let right = document.getElementById("right").value;
+      let op = document.getElementById("operator").value;
+
+      if (!isPositiveInteger(left) || !isPositiveInteger(right)) {
+        alert("Error :(");
+        return;
+      }
+
+      left = parseInt(left);
+      right = parseInt(right);
+
+      // Division or modulo by zero
+      if ((op === "/" || op === "%") && right === 0) {
+        alert("It's over 9000!");
+        console.log("It's over 9000!");
+        return;
+      }
+
+      let result;
+      switch (op) {
+        case "+": result = left + right; break;
+        case "-": result = left - right; break;
+        case "*": result = left * right; break;
+        case "/": result = left / right; break;
+        case "%": result = left % right; break;
+      }
+
+      alert("Result: " + result);
+      console.log("Result: " + result);
+    });
+
+    // Every 30 seconds
+    setInterval(function() {
+      alert("Please, use me...");
+    }, 30000);
+  </script>
+</body>
+</html>

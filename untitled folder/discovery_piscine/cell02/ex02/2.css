@@ -1,0 +1,50 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Parallax sections */
+.parallax {
+  position: relative;
+  height: 100vh;  /* เต็มจอ */
+  background-attachment: fixed;  /* ทำให้เกิด parallax effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Images */
+.bg1 {
+  background-image: url("dog.png"); /* ใส่รูปแรก */
+}
+
+.bg2 {
+  background-image: url("dog1.png"); /* ใส่รูปสอง */
+}
+
+/* Text in center */
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* Black block */
+.block {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block .text {
+  color: white;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balloon</title>
+  <style>
+    #balloon {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border-radius: 50%;
+      margin: 50px auto;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+  <div id="balloon"></div>
+
+  <script>
+    const balloon = document.getElementById("balloon");
+    const colors = ["red", "green", "blue"];
+    let colorIndex = 0;
+    let size = 200;
+
+    // คลิก = ขยาย + เปลี่ยนสีตามลำดับ
+    balloon.addEventListener("click", () => {
+      size += 10;
+      if (size > 420) {
+        size = 200;
+        colorIndex = 0; // reset to red
+      }
+      balloon.style.width = size + "px";
+      balloon.style.height = size + "px";
+      balloon.style.backgroundColor = colors[colorIndex];
+      colorIndex = (colorIndex + 1) % colors.length;
+    });
+
+    // mouseleave = หด -5px + เปลี่ยนสีย้อนกลับ
+    balloon.addEventListener("mouseleave", () => {
+      if (size > 200) size -= 5;
+      balloon.style.width = size + "px";
+      balloon.style.height = size + "px";
+
+      colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+      balloon.style.backgroundColor = colors[colorIndex];
+    });
+  </script>
+</body>
+</html>

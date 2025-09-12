@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Background</title>
+  <link rel="stylesheet" href="backgroound.css">
+</head>
+<body>
+  <button onclick="changeColor()">Click me!</button>
+
+  <script>
+    function changeColor() {
+      // สุ่มสี RGB
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    }
+  </script>
+</body>
+</html>
