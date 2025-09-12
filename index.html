@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar-custom">
+    <a href="#about">About</a>
+    <a href="#showcase">Showcase</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="background">
+  <svg viewBox="0 0 1600 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- กำหนด gradient ชมพู-ม่วง-ฟ้า -->
+    <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff4d85"/> <!-- ชมพู -->
+      <stop offset="50%" stop-color="#9b4dff"/> <!-- ม่วง -->
+      <stop offset="100%" stop-color="#00d9f5"/> <!-- ฟ้า -->
+    </linearGradient>
+  </defs>
+
+  <!-- เส้นโค้งม้วน -->
+  <path d="M 0 400 
+           C 200 100, 400 700, 600 400
+           S 1000 100, 1200 400
+           S 1400 700, 1600 400"
+        stroke="url(#gradient)"
+        stroke-width="40"
+        fill="none"
+        stroke-linecap="round"
+        opacity="0.8"/>
+</svg>
+
+</div>
+
+
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h3>OUR</h3>
+    <h1>PORTFOLIO</h1>
+    <p>Click to see our work</p>
+    <div class="btn-group">
+      <a href="person1.html" class="btn-gradient">Person1</a>
+      <a href="person2.html" class="btn-gradient">Person2</a>
+    </div>
+  </div>
+</body>
+</html>
